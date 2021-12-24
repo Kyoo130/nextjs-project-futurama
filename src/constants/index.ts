@@ -1,1 +1,1 @@
-export const CHARACTERS_API_ENDPOINT = 'https://api.sampleapis.com/futurama/';
+export const FUTURAMA_API_ENDPOINT = 'https://api.sampleapis.com/futurama/';
