@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 import { CharacterCard, Error, Loading } from "../../components";
-import { useCharactersSData } from "../../hooks/useCharactersData";
+import { useFuturamaData } from "../../hooks/useFuturamaData";
 import { Character } from "../../types/Character";
 
 const CharactersPage: NextPage = () => {
-  const title = "characters";
-  const { data, error } = useCharactersSData(title);
+  const endpoint = "characters";
+  const { data, error } = useFuturamaData(endpoint);
 
   if (error) return <Error />;
   if (!data) return <Loading />;
