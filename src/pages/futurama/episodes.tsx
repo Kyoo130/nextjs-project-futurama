@@ -1,3 +1,4 @@
+import styled from "@emotion/styled";
 import type { NextPage } from "next";
 import { EpisodeCard, Error, Loading } from "../../components";
 import { useFuturamaData } from "../../hooks/useFuturamaData";
@@ -13,8 +14,7 @@ const EpisodesPage: NextPage = () => {
 
   return (
     <div>
-      <h1>EpisodesPage</h1>
-      <main>
+      <EpisodeMain>
         {data.map((episodesData: Episodes) => {
           return (
             <EpisodeCard
@@ -23,9 +23,16 @@ const EpisodesPage: NextPage = () => {
             />
           );
         })}
-      </main>
+      </EpisodeMain>
     </div>
   )
 }
 
 export default EpisodesPage;
+
+const EpisodeMain = styled.main`
+  margin: 20px 10% 20px;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(2, 1fr);
+`
