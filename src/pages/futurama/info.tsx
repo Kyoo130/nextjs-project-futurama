@@ -2,7 +2,8 @@ import styled from "@emotion/styled";
 import type { NextPage } from "next";
 import { InfoCard, Error, Loading } from "../../components";
 import { useFuturamaData } from "../../hooks/useFuturamaData";
-import { Info } from "../../types/Info";
+import { Information } from "../../types/Info";
+
 
 
 const InfoPage: NextPage = () => {
@@ -15,7 +16,7 @@ const InfoPage: NextPage = () => {
   return (
     <div>
       <InfoCont>
-        {data.map((infoData: Info) => {
+        {data.map((infoData: Information) => {
           return (
             <InfoCard
               key={`cast-futurama-${infoData.id}`}
