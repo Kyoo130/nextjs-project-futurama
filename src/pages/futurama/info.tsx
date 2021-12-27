@@ -1,7 +1,9 @@
+import styled from "@emotion/styled";
 import type { NextPage } from "next";
 import { InfoCard, Error, Loading } from "../../components";
 import { useFuturamaData } from "../../hooks/useFuturamaData";
-import { Info } from "../../types/info";
+import { Info } from "../../types/Info";
+
 
 const InfoPage: NextPage = () => {
   const endpoint = "info";
@@ -12,8 +14,7 @@ const InfoPage: NextPage = () => {
 
   return (
     <div>
-      <h1>InfoPage</h1>
-      <main>
+      <InfoCont>
         {data.map((infoData: Info) => {
           return (
             <InfoCard
@@ -22,9 +23,18 @@ const InfoPage: NextPage = () => {
             />
           );
         })}
-      </main>
+      </InfoCont>
     </div>
   )
 }
 
 export default InfoPage;
+
+const InfoCont = styled.main`
+  width: 90%;
+  margin: 30px auto;
+  padding: 10px 20px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  box-shadow: 3px 3px 5px 0px rgba(191, 191, 191, 0.53);
+`

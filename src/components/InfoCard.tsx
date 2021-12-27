@@ -1,3 +1,4 @@
+import styled from "@emotion/styled";
 import { Info } from "../types/info";
 
 interface InfoProps {
@@ -9,24 +10,11 @@ export const InfoCard = ({ infoData }: InfoProps) => {
 
   return (
     <div>
-      <dl>
-        <dt>synopsis</dt>
-        <dd>{synopsis}</dd>
-      </dl>
-      <dl>
-          <dt>yearsAired</dt>
-          <dd>{yearsAired}</dd>
-      </dl>
-      <dl>
-          <dt>creators - 1</dt>
-          <dd>{creators[0].name}</dd>
-          <dd>{creators[0].url}</dd>
-      </dl>
-      <dl>
-          <dt>creators - 2</dt>
-          <dd>{creators[1].name}</dd>
-          <dd>{creators[1].url}</dd>
-      </dl>
+      <h2>Synopsis</h2>
+      <small>{yearsAired}</small>
+      <p>{synopsis}</p>
     </div>
   );
 };
+
+
