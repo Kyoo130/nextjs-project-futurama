@@ -15,6 +15,7 @@ const InfoPage: NextPage = () => {
 
   return (
     <div>
+      <InfoH2>Information</InfoH2>
       <InfoCont>
         {data.map((infoData: Information) => {
           return (
@@ -31,11 +32,14 @@ const InfoPage: NextPage = () => {
 
 export default InfoPage;
 
+
+const InfoH2 = styled.h2`
+  text-align: center;
+`
+
 const InfoCont = styled.main`
-  width: 90%;
-  margin: 30px auto;
-  padding: 10px 20px;
-  border: 1px solid lightgray;
+  width: 50%;
+  margin: 10px auto;
   border-radius: 4px;
-  box-shadow: 3px 3px 5px 0px rgba(191, 191, 191, 0.53);
+  font-variant: small-caps;
 `
