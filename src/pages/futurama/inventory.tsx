@@ -1,3 +1,4 @@
+import styled from "@emotion/styled";
 import type { NextPage } from "next";
 import { InventoryCard, Error, Loading } from "../../components";
 import { useFuturamaData } from "../../hooks/useFuturamaData";
@@ -12,8 +13,8 @@ const InventoryPage: NextPage = () => {
 
   return (
     <div>
-      <h1>InventoryPage</h1>
-      <main>
+      <InventoryH2>Inventory</InventoryH2>
+      <InventoryMain>
         {data.map((inventoryData: Inventory) => {
           return (
             <InventoryCard
@@ -22,9 +23,21 @@ const InventoryPage: NextPage = () => {
             />
           );
         })}
-      </main>
+      </InventoryMain>
     </div>
   )
 }
 
 export default InventoryPage;
+
+
+const InventoryH2 = styled.h2`
+  text-align: center;
+`
+
+const InventoryMain = styled.main`
+  margin: auto 10%;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(3, 1fr);
+`
