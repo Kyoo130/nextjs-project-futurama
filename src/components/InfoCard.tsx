@@ -1,8 +1,7 @@
-import styled from "@emotion/styled";
-import { Info } from "../types/info";
+import { Information } from "../types/Info"
 
 interface InfoProps {
-  infoData: Info;
+  infoData: Information;
 }
 
 export const InfoCard = ({ infoData }: InfoProps) => {
