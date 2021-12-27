@@ -1,3 +1,4 @@
+import styled from "@emotion/styled";
 import type { NextPage } from "next";
 import { CharacterCard, Error, Loading } from "../../components";
 import { useFuturamaData } from "../../hooks/useFuturamaData";
@@ -12,8 +13,8 @@ const CharactersPage: NextPage = () => {
 
   return (
     <div>
-      <h1>CharactersPage</h1>
-      <main>
+      <CharacterH2>Characters</CharacterH2>
+      <CharacterMain>
         {data.map((characterData: Character) => {
           return (
             <CharacterCard
@@ -22,9 +23,20 @@ const CharactersPage: NextPage = () => {
             />
           );
         })}
-      </main>
+      </CharacterMain>
     </div>
   );
 };
 
 export default CharactersPage;
+
+const CharacterH2 = styled.h2`
+  text-align: center;
+`
+
+const CharacterMain = styled.main`
+  margin: auto 10%;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(3, 1fr);
+`
