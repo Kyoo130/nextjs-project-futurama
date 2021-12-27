@@ -1,3 +1,4 @@
+import styled from "@emotion/styled";
 import type { NextPage } from "next";
 import { CastCard, Error, Loading } from "../../components";
 import { useFuturamaData } from "../../hooks/useFuturamaData";
@@ -15,8 +16,8 @@ const CastPage: NextPage = () => {
 
   return (
     <div>
-      <h1>CastPage</h1>
-      <main>
+      <CastH2>CastPage</CastH2>
+      <CastMain>
         {data.map((castData: Cast) => {
           return (
             <CastCard
@@ -25,10 +26,21 @@ const CastPage: NextPage = () => {
             />
           );
         })}
-      </main>
- 
+      </CastMain>
+
     </div>
   )
 }
 
 export default CastPage;
+
+const CastH2 = styled.h2`
+  text-align: center;
+`
+
+const CastMain = styled.main`
+  margin: auto 10%;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(3, 1fr);
+`
