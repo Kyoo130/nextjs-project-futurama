@@ -6,14 +6,9 @@ export const Layout: React.FC = ({ children }) => {
   return (
     <div>
       <Navigation />
-      <Container>
+      <main>
         { children }
-      </Container>
+      </main>
     </div>
   )
 }
-
-const Container = styled.main`
-  max-width: 1280px;
-  margin: auto;
-`
