@@ -1,3 +1,4 @@
+import styled from "@emotion/styled";
 import type { NextPage } from "next";
 import { QuestionCard, Error, Loading } from "../../components";
 import { useFuturamaData } from "../../hooks/useFuturamaData";
@@ -12,8 +13,7 @@ const QuestionsPage: NextPage = () => {
 
   return (
     <div>
-      <h1>QuestionsPage</h1>
-      <main>
+      <QuestionsMain>
         {data.map((questionData: Questions) => {
           return (
             <QuestionCard
@@ -22,9 +22,18 @@ const QuestionsPage: NextPage = () => {
             />
           );
         })}
-      </main>
+      </QuestionsMain>
     </div>
   )
 }
 
 export default QuestionsPage;
+
+const QuestionsMain = styled.main`
+  margin: 20px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2em;
+`
