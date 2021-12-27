@@ -1,6 +1,6 @@
 export interface Questions {
     id: number,
     question: string,
-    possibleAnswers: string,
+    possibleAnswers: [string],
     correctAnswer: string,
 }

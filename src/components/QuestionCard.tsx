@@ -11,7 +11,7 @@ export const QuestionCard = ({ questionData }: QuestionProps) => {
   return (
     <QuestionDiv>
       <h3>{question}</h3>
-      {possibleAnswers.map((possibleAnswer: Questions) => {
+      {possibleAnswers.map((possibleAnswer: string) => {
           return (
             <li key={possibleAnswer}>{possibleAnswer}</li>
           );
