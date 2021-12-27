@@ -32,6 +32,11 @@ const CharacterCont = styled.div`
   border: 1px solid lightgray;
   border-radius: 4px;
   box-shadow: 3px 3px 5px 0px rgba(191, 191, 191, 0.53);
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+  &:hover{
+    transform: scale(1.03);
+  }
   
 `
 
